@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuchyně Doma — recepty, na které se vaří s chutí</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="logo">Kuchyně<span>Doma</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#recept-dne">Recept dne</a>
+      <a href="#kategorie">Kategorie</a>
+      <a href="#o-nas">O nás</a>
+      <a href="#novinky">Novinky</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="hero-kicker">Vaříme, jak nás to naučili doma</p>
+      <h1>Nedělní guláš<br>se dřel čtyři hodiny.<br>Vydrží ho sníst deset minut.</h1>
+      <p class="hero-lede">Recepty od lidí, kteří vaří pro rodinu, ne pro kameru. Bez zbytečných ingrediencí, bez spěchu, s návodem, co dělat, když se něco pokazí.</p>
+      <a href="#recept-dne" class="btn">Podívat se na dnešní recept</a>
+    </div>
+  </section>
+
+  <section class="recipe-of-day" id="recept-dne">
+    <div class="wrap rod-grid">
+      <div class="rod-text">
+        <p class="eyebrow">Recept dne</p>
+        <h2>Bramboračka jako od babičky</h2>
+        <p>Hustá, kouřová, s hříbky, které jsme sbírali minulý týden. Tenhle recept nemá přesné gramáže — babička taky nikdy nevážila, jen ochutnávala. My jsme to pro vás aspoň odhadli.</p>
+        <ul class="rod-meta">
+          <li><strong>45 min</strong><span>čas přípravy</span></li>
+          <li><strong>6 porcí</strong><span>vydatná polévka</span></li>
+          <li><strong>Lehké</strong><span>i pro začátečníky</span></li>
+        </ul>
+        <button class="btn btn-outline" id="showIngredients">Zobrazit suroviny</button>
+        <ul class="ingredients" id="ingredientsList" hidden>
+          <li>4 větší brambory</li>
+          <li>hrst sušených hříbků</li>
+          <li>1 mrkev, 1 petržel</li>
+          <li>kousek uzeného masa</li>
+          <li>smetana, majoránka, česnek</li>
+        </ul>
+      </div>
+      <div class="rod-visual" aria-hidden="true">
+        <div class="bowl">
+          <div class="steam s1"></div>
+          <div class="steam s2"></div>
+          <div class="steam s3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories" id="kategorie">
+    <div class="wrap">
+      <p class="eyebrow">Podle nálady</p>
+      <h2>Co dnes vaříte?</h2>
+      <div class="cat-filter" id="catFilter">
+        <button class="cat-btn is-active" data-cat="all">Vše</button>
+        <button class="cat-btn" data-cat="polevky">Polévky</button>
+        <button class="cat-btn" data-cat="hlavni">Hlavní jídla</button>
+        <button class="cat-btn" data-cat="sladke">Sladké</button>
+        <button class="cat-btn" data-cat="rychle">Do 20 minut</button>
+      </div>
+      <div class="cat-grid" id="catGrid">
+        <article class="dish" data-cat="polevky">
+          <span class="dish-tag">Polévka</span>
+          <h3>Bramboračka s hříbky</h3>
+          <p>45 min · hustá, kouřová</p>
+        </article>
+        <article class="dish" data-cat="hlavni">
+          <span class="dish-tag">Hlavní jídlo</span>
+          <h3>Svíčková na smetaně</h3>
+          <p>3 hod · neděle jak má být</p>
+        </article>
+        <article class="dish" data-cat="rychle">
+          <span class="dish-tag">Do 20 minut</span>
+          <h3>Vejce na paprice</h3>
+          <p>15 min · pro všední den</p>
+        </article>
+        <article class="dish" data-cat="sladke">
+          <span class="dish-tag">Sladké</span>
+          <h3>Kynuté meruňkové knedlíky</h3>
+          <p>1 hod · jako u babičky</p>
+        </article>
+        <article class="dish" data-cat="hlavni rychle">
+          <span class="dish-tag">Hlavní jídlo</span>
+          <h3>Kuře na paprice s knedlíkem</h3>
+          <p>35 min · rodinná klasika</p>
+        </article>
+        <article class="dish" data-cat="polevky rychle">
+          <span class="dish-tag">Polévka</span>
+          <h3>Česnečka se sýrem</h3>
+          <p>20 min · na rýmu i na chuť</p>
+        </article>
+      </div>
+      <p class="cat-empty" id="catEmpty" hidden>V téhle kategorii zatím nic nemáme — zkuste jinou.</p>
+    </div>
+  </section>
+
+  <section class="about" id="o-nas">
+    <div class="wrap about-grid">
+      <div>
+        <p class="eyebrow">O nás</p>
+        <h2>Vaříme podle chuti, ne podle přesných čísel</h2>
+        <p>Kuchyně Doma vznikla ze sešitu receptů, který si tři sestry posílaly mezi sebou, protože žádná si nepamatovala, kolik čeho babička dávala do svíčkové. Dnes je z toho místo, kam si chodí lidé pro jídlo, které chutná jako doma — protože skoro pokaždé doma opravdu vzniklo.</p>
+      </div>
+      <div class="about-stats">
+        <div><strong>212</strong><span>receptů v sešitě</span></div>
+        <div><strong>3</strong><span>generace v kuchyni</span></div>
+        <div><strong>0</strong><span>ingrediencí, co nemáte doma</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="novinky">
+    <div class="wrap newsletter-inner">
+      <div>
+        <p class="eyebrow">Novinky</p>
+        <h2>Nový recept každou neděli ráno</h2>
+        <p>Žádný spam, žádné reklamy na kuchyňské roboty. Jen recept, který stihnete uvařit do oběda.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form" novalidate>
+        <label for="email" class="sr-only">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="vas@email.cz" required>
+        <button type="submit" class="btn">Přihlásit se k odběru</button>
+      </form>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a href="#" class="logo">Kuchyně<span>Doma</span></a>
+    <p>&copy; <span id="year"></span> Kuchyně Doma. Vařeno s láskou a trochou improvizace.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
